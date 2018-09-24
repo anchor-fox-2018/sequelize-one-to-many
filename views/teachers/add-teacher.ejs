@@ -28,7 +28,7 @@
         <div>
             <label for="subject">Subject</label>
             <select name="SubjectId">
-                <% subjects.forEach(subjects => { %>
+                <% subjects.forEach(subject => { %>
                 <option value=<%=subject.id %>>
                     <%= subject.subject_name %>
                 </option>
