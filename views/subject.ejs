@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Subject</title>
+</head>
+<body>
+    <div class="mx-auto ml-auto" style="width: 60%; margin-top: 42px">
+        <h1>Subjects</h1>
+
+        <!-- Table -->
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Teacher</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (i in subject) { %>
+                    <tr>
+                        <th scope="row"><%= subject[i].id %></th>
+                        <td><%= subject[i].subject_name %></td>
+                        <td>
+                        <% for (let c = 0; c < subject.length; c++) { %>
+                                <%= c + 1 %>. <%= subject[i].Teachers[c].first_name %> <%= subject[i].Teachers[c].last_name %>
+                                <br>
+                        <% } %>
+                        </td>
+                        
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <!-- End Table -->
+
+        
+        </div>
+    
+</body>
+</html>

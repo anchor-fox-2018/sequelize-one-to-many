@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Teacher</title>
+</head>
+<body>
+    <div class="mx-auto ml-auto" style="width: 60%; margin-top: 42px">
+        <h1>Teachers</h1>
+
+        <!-- Table -->
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (i in teacher) { %>
+                    <tr>
+                        <th scope="row"><%= teacher[i].id %></th>
+                        <td><%= teacher[i].first_name %></td>
+                        <td><%= teacher[i].last_name %></td>
+                        <td><%= teacher[i].email %></td>
+                        <td><%= teacher[i].Subject.subject_name %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <!-- End Table -->
+
+    </div>
+    
+</body>
+</html>
